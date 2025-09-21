@@ -19,6 +19,14 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class RouterMiddlewarePipelineTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        // Skip when Atomic\\Http is not present (router repo is tested standalone)
+        if (!class_exists(\Atomic\Http\MiddlewareStack::class)) {
+            $this->markTestSkipped('Atomic\\Http not available; skip router-kernel middleware pipeline test.');
+        }
+    }
+
     public function test_route_aware_middleware_sees_params_before_dispatch(): void
     {
         $router = new Router();

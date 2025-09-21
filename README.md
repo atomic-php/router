@@ -3,6 +3,9 @@
 [![PHP Version](https://img.shields.io/badge/php-%5E8.4-blue)](https://www.php.net/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](tests/)
+[![CI](https://github.com/atomic-php/router/actions/workflows/ci.yml/badge.svg)](https://github.com/atomic-php/router/actions)
+[![Codecov](https://codecov.io/gh/atomic-php/router/branch/main/graph/badge.svg)](https://codecov.io/gh/atomic-php/router)
+[![Packagist](https://img.shields.io/packagist/v/atomic/router)](https://packagist.org/packages/atomic/router)
 
 A blazingly fast, zero‑bloat PHP router designed for high‑throughput applications. Built with modern PHP features and designed to integrate cleanly with PSR‑7/PSR‑15 stacks and frameworks. Follows the same compile‑time optimization philosophy as Atomic HTTP Kernel.
 

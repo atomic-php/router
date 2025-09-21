@@ -2,7 +2,7 @@
     "name": "atomic/router",
     "description": "Lightning-fast, ultra-slim PHP router with zero bloat and maximum performance",
     "type": "library",
-    "homepage": "https://github.com/atomic/router",
+    "homepage": "https://github.com/atomic-php/router",
     "readme": "README.md",
     "license": "MIT",
     "authors": [
@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/atomic/router/issues",
-        "source": "https://github.com/atomic/router"
+        "issues": "https://github.com/atomic-php/router/issues",
+        "source": "https://github.com/atomic-php/router"
     },
     "keywords": [
         "http",

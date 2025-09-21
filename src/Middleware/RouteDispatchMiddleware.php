@@ -18,6 +18,9 @@ use Psr\Http\Server\RequestHandlerInterface;
 final class RouteDispatchMiddleware implements MiddlewareInterface
 {
     #[\Override]
+    /**
+     * @psalm-suppress UnusedParam $handler is intentionally unused; dispatch ends the pipeline.
+     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $matched = $request->getAttribute(Router::ATTR_HANDLER);

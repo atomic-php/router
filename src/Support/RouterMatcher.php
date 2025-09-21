@@ -30,6 +30,7 @@ final readonly class RouterMatcher
     /**
      * Match request and return tuple [handler, requestWithParams].
      *
+     * @psalm-suppress PossiblyUnusedMethod Used by RouterMatchMiddleware in match-before-dispatch pipelines
      * @return array{0:RequestHandlerInterface,1:ServerRequestInterface}
      */
     public function match(ServerRequestInterface $request): array

@@ -3,6 +3,7 @@
 [![PHP Version](https://img.shields.io/badge/php-%5E8.4-blue)](https://www.php.net/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](tests/)
+[![Coverage](https://img.shields.io/badge/coverage-report-brightgreen)](#testing)
 [![CI](https://github.com/atomic-php/router/actions/workflows/ci.yml/badge.svg)](https://github.com/atomic-php/router/actions)
 [![Codecov](https://codecov.io/gh/atomic-php/router/branch/main/graph/badge.svg)](https://codecov.io/gh/atomic-php/router)
 [![Packagist](https://img.shields.io/packagist/v/atomic/router)](https://packagist.org/packages/atomic/router)
@@ -42,6 +43,74 @@ Requirements:
 - PHP 8.4 or higher
 - PSR‑7 HTTP Message implementation
 - PSR‑15 HTTP Server Request Handler interfaces
+
+## Testing
+
+Run the comprehensive test suite and quality checks:
+
+```bash
+# Run all tests
+composer test
+
+# Run tests with coverage (generates coverage.xml)
+composer test-coverage
+
+# Static analysis & CS
+composer psalm
+composer cs-check
+```
+
+CI uploads coverage.xml to Codecov for the badge/report.
+
+## Benchmarking
+
+Measure performance with the built-in benchmark suite:
+
+```bash
+# Run all benchmarks
+composer benchmark-router
+
+# Or directly
+php benchmarks/run-benchmarks.php
+```
+
+Example results:
+
+```text
+Router Benchmark:
+benchStaticExactMatch         : ~440k ops/sec (0.002 ms/op)
+benchDynamicMatch             : ~326k ops/sec (0.003 ms/op)
+benchNotFound                 :  ~95k ops/sec (0.010 ms/op)
+benchCompileRoutes            :  ~40k ops/sec (0.025 ms/op)
+```
+
+## Code Quality
+
+```bash
+# Check code style
+composer cs-check
+
+# Fix code style
+composer cs-fix
+
+# Run static analysis
+composer psalm
+
+# Run all quality checks
+composer qa
+```
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release notes and history.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ## Quick Start
 
